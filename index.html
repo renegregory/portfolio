@@ -608,24 +608,5 @@
         });
       }
     </script>
-
-  <script>
-  const themeButton = document.getElementById('theme-button');
-  const darkTheme = 'dark-theme';
-
-  // Check if user previously selected a theme
-  const selectedTheme = localStorage.getItem('selected-theme');
-
-  if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-  }
-
-  themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme);
-    const currentTheme = document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-    localStorage.setItem('selected-theme', currentTheme);
-  });
-</script>
-
   </body>
 </html>
