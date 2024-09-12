@@ -89,13 +89,13 @@
         const selectedTheme = localStorage.getItem('selected-theme');
       
         if (selectedTheme) {
-          document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](dark-theme);
+          document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
         }
       
       themeButton.addEventListener('click', () => {
-        document.body.classList.toggle(dark-theme);
+        document.body.classList.toggle(darkTheme);
         
-        const currentTheme = document.body.classList.contains(dark-theme) ? 'dark' : 'light';
+        const currentTheme = document.body.classList.contains(darkTheme) ? 'dark' : 'light';
         localStorage.setItem('selected-theme', currentTheme);
       });
     </script>
