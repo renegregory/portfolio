@@ -132,7 +132,7 @@
           <i class="uil uil-times nav__close noSelect" id="nav-close"></i>
         </div>
 
-        <div class="nav__btns">
+        <div class="nav_btns">
           <!-- theme change button -->
           <i class="uil uil-moon change-theme" id="theme-button"></i>
 
@@ -600,22 +600,24 @@
         });
       }
     </script>
-  <script>
-  const themeButton = document.getElementById('theme-button');
-  const darkTheme = 'dark-theme';
+    
+    <script>
+      const themeButton = document.getElementById('theme-button');
+      const darkTheme = 'dark-theme';
+    
+      // Check if user previously selected a theme
+      const selectedTheme = localStorage.getItem('selected-theme');
+    
+      if (selectedTheme) {
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+      }
+    
+      themeButton.addEventListener('click', () => {
+        document.body.classList.toggle(darkTheme);
+        const currentTheme = document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+        localStorage.setItem('selected-theme', currentTheme);
+      });
+    </script>
 
-  // Check if user previously selected a theme
-  const selectedTheme = localStorage.getItem('selected-theme');
-
-  if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-  }
-
-  themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme);
-    const currentTheme = document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-    localStorage.setItem('selected-theme', currentTheme);
-  });
-</script>
   </body>
 </html>
