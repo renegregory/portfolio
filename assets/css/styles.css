@@ -83,7 +83,7 @@ body.dark-theme {
 
 /*========== Button Dark/Light ==========*/
 
-.nav__btns {
+.nav_btns {
   display: flex;
   align-items: center;
 }
