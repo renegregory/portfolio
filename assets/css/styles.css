@@ -96,7 +96,7 @@ body.dark-theme {
   cursor: pointer;
 }
 .change-theme:hover {
-  color: var(--first-color--second);
+  color: var(--first-color-second);
 }
 
 /*==================== BASE ====================*/
