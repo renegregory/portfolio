@@ -91,7 +91,7 @@ body.dark-theme {
 }
 .change-theme {
   font-size: 1.25rem;
-  color: var(--first-color-second);
+  color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
 }
