@@ -83,9 +83,9 @@
   <body>
     <script>
       themeButton.addEventListener('click', () => {
-        document.body.classList.toggle(darkTheme);
+        document.body.classList.toggle(dark-theme);
         
-        const currentTheme = document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+        const currentTheme = document.body.classList.contains(dark-theme) ? 'dark' : 'light';
         localStorage.setItem('selected-theme', currentTheme);
       });
     </script>
